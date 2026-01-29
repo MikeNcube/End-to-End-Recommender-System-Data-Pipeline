@@ -1,0 +1,43 @@
+﻿# Data Pipeline Configuration
+
+data_sources:
+  local:
+    path: "./data/input"
+    format: "csv"
+    
+  s3:
+    bucket: "your-data-bucket"
+    region: "us-east-1"
+    
+  database:
+    host: "localhost"
+    port: 5432
+    database: "data_pipeline"
+    username: "postgres"
+
+processing:
+  batch_size: 1000
+  max_retries: 3
+  timeout_seconds: 300
+  
+quality_checks:
+  enable_great_expectations: true
+  expectations_path: "./great_expectations/expectations"
+  validation_results_path: "./great_expectations/uncommitted/validations"
+  
+airflow:
+  dags_folder: "./dags"
+  max_active_runs: 1
+  default_args:
+    owner: "data_team"
+    retries: 3
+    
+api:
+  host: "0.0.0.0"
+  port: 8000
+  debug: true
+  
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "./logs/pipeline.log"
