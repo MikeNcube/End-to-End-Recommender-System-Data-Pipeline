@@ -1,0 +1,89 @@
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+.eggs/
+parts/
+var/
+sdist/
+wheels/
+*.whl
+pip-wheel-metadata/
+share/python-wheels/
+MANIFEST
+
+# ── Virtual environments ───────────────────────────────────────────────────────
+venv/
+.venv/
+env/
+.env/
+ENV/
+.virtualenv/
+
+# ── Secrets / credentials ─────────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+credentials
+
+# ── Testing & coverage ────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+*.coveragerc
+nosetests.xml
+test-results/
+
+# ── Airflow ────────────────────────────────────────────────────────────────────
+airflow/logs/
+airflow/plugins/
+airflow.db
+airflow.cfg
+webserver_config.py
+standalone_admin_password.txt
+
+# ── Great Expectations ────────────────────────────────────────────────────────
+great_expectations/uncommitted/
+great_expectations/.ge_store_backend_id
+
+# ── Jupyter ───────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ── Logs & runtime artefacts ──────────────────────────────────────────────────
+logs/
+*.log
+*.log.*
+
+# ── Data (local copies) ───────────────────────────────────────────────────────
+data/input/
+data/output/
+
+# ── Terraform ─────────────────────────────────────────────────────────────────
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
+*.tfvars
+
+# ── OS / editor noise ─────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
